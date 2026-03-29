@@ -1,8 +1,8 @@
-# PSD3-Style Open Banking and Payment Orchestration Platform
+# PSD3-Style Open Banking 
 
 ## Overview
 
-PSD3-Style Open Banking and Payment Orchestration Platform este un proiect enterprise-style construit pentru a simula o platformă complexă de integrare multi-bancă, inspirată din open banking, payment initiation și cerințe moderne de procesare, monitorizare și control al plăților.
+PSD3-Style Open Banking este un proiect enterprise-style construit pentru a simula o platformă complexă de integrare multi-bancă, inspirată din open banking.
 
 Platforma oferă un model intern unificat pentru:
 
@@ -12,7 +12,7 @@ Platforma oferă un model intern unificat pentru:
 - integrarea cu mai multe bănci prin adaptoare separate
 - procesare sincronă și asincronă
 - audit și istoric complet al operațiunilor
-- analiză anti-fraudă
+- analiză AML
 - dispute management
 
 Scopul proiectului este strict tehnic
@@ -23,10 +23,10 @@ Acest proiect urmărește să demonstreze:
 
 - integrare multi-bank prin contracte externe diferite
 - model intern comun pentru payment initiation și account information
-- procesare asincronă cu Kafka
+- procesare asincronă prin Kafka
 - persistență și audit în PostgreSQL
 - orchestrare și routing inteligent
-- motor de reguli pentru anti-fraudă
+- motor de reguli pentru AML
 - lifecycle pentru dispute
 - extensibilitate pentru noi bănci și noi fluxuri
 
@@ -58,13 +58,13 @@ Acest proiect urmărește să demonstreze:
 - agregare răspunsuri din bănci diferite
 - normalizare format răspuns
 
-### 4. Fraud Detection
+### 4. AML Detection
 
 - analiză reguli înainte de trimiterea plății
 - scoring de risc
 - flagging pentru operațiuni suspecte
 - blocare / review / allow în funcție de scor și reguli
-- audit pentru deciziile antifraudă
+- audit pentru deciziile AML
 
 ### 5. Dispute Management
 
