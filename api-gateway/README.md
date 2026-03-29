@@ -27,7 +27,7 @@ apoi rutează cererile către serviciile interne corespunzătoare.
 ### Structura proiectului: 
 
 api-gateway/ 
-├── src/main/java/ro/stefan/gateway/ 
+├── src/main/java/ro/stefan/gateway/
 │ ├── config/ 
 │ │ ├── GatewayRoutesConfig.java 
 │ │ ├── SecurityConfig.java 
