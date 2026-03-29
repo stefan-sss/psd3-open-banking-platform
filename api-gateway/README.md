@@ -7,14 +7,14 @@ apoi rutează cererile către serviciile interne corespunzătoare.
 
 ### Responsibilities
 
-- unified external entry point
-- request routing to internal services
-- token validation and propagation
-- correlation ID propagation
-- request/response logging
-- rate limiting
-- unified error responses
-- health and observability endpoints
+- punct unic de intrare pentru acces extern
+- rutarea request-urilor către serviciile interne
+- validarea și propagarea token-urilor
+- propagarea correlation ID-ului
+- logarea request-urilor și a răspunsurilor
+- limitarea de request-uri (rate limiting)
+- răspunsuri de eroare unificate
+- endpoint-uri pentru health și observabilita
 
 ### Internal Routing
 
