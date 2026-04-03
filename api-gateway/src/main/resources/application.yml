@@ -8,16 +8,41 @@ spring:
    cloud:
       gateway:
          routes:
-            -id: consent-service
-            uri: http://localhost:8081
-            pridicates:
-               -Path=/api/consents/**
+            - id: consent-service
+              uri: http://localhost:8081
+              predicates:
+                 - Path=/api/consents/**
+              filters:
+                  - name: CircuitBreaker
+                    args:
+                       name: consentCircuitBreaker
+                       fallbackUri: forward:/fallback/consents
 
 management:
   endpoints:
     web:
       exposure:
-        include: health,info,metrics
+        include: health,info,metrics, gateway
   endpoint:
     health:
       show-details: always
+
+resilience4j:
+   circuitbreaker:
+         instances:
+            consentCircuitBreaker:
+               slidingWindowType: COUNT_BASED
+               slidingWindowSize: 5
+               minimumNumberOfCalls: 3
+               failureRateThreshold: 50
+               waitDurationInOpenState: 10s
+               permittedNumberOfCallsInHalfOpenState: 2
+               automaticTransitionFromOpenToHalfOpenEnabled: true
+               
+               
+               
+logging:
+  level:
+    root: INFO
+    org.springframework.cloud.gateway: INFO
+    com.stefan.gateway: DEBUG

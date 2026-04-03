@@ -16,6 +16,9 @@ apoi rutează cererile către serviciile interne corespunzătoare.
 - răspunsuri de eroare unificate
 - endpoint-uri pentru health și observabilita
 
+Implementare Resilience4j Circuit Breaker pentru a proteja rutele către serviciile interne. 
+Pentru fiecare rută critică există un circuit breaker dedicat și un fallback endpoint intern care întoarce un răspuns standardizat 503 Service Unavailable.
+
 ### Internal Routing
 
 - /api/consents/** → consent-service
