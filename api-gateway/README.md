@@ -5,7 +5,7 @@ Acesta expune API-urile publice, aplică responsabilități transversale precum 
 correlation ID, request logging, rate limiting și error normalization, 
 apoi rutează cererile către serviciile interne corespunzătoare.
 
-### Responsibilities
+### Responsabilitatile proiectului
 
 - punct unic de intrare pentru acces extern
 - rutarea request-urilor către serviciile interne
@@ -19,7 +19,7 @@ apoi rutează cererile către serviciile interne corespunzătoare.
 Implementare Resilience4j Circuit Breaker pentru a proteja rutele către serviciile interne. 
 Pentru fiecare rută critică există un circuit breaker dedicat și un fallback endpoint intern care întoarce un răspuns standardizat 503 Service Unavailable.
 
-### Internal Routing
+### Rutele interne
 
 - /api/consents/** → consent-service
 - /api/payments/** → payment-initiation-service

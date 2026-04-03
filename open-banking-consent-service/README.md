@@ -27,16 +27,16 @@ Acest proiect este construit pentru a simula o componentă realistă dintr-o pla
 
 
 
-### Routele interne
+### Rutele interne
 
-POST /api/consents
-POST /api/consents/{consentId}/activate
-POST /api/consents/{consentId}/revoke
-POST /api/consents/{consentId}/expire
-GET  /api/consents/{consentId}
-GET  /api/consents/{consentId}/accounts
-GET  /api/consents/{consentId}/history
-POST /api/consents/{consentId}/validate-access
+- POST /api/consents
+- POST /api/consents/{consentId}/activate
+- POST /api/consents/{consentId}/revoke
+- POST /api/consents/{consentId}/expire
+- GET  /api/consents/{consentId}
+- GET  /api/consents/{consentId}/accounts
+- GET  /api/consents/{consentId}/history
+- POST /api/consents/{consentId}/validate-access
 
 ### Structura proiectului: 
 
