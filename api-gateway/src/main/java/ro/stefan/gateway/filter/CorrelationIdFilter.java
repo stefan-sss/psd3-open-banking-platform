@@ -9,6 +9,7 @@ import org.springframework.http.server.reactive.ServerHttpRequest;
 import org.springframework.web.server.ServerWebExchange;
 
 import reactor.core.publisher.Mono;
+import ro.stefan.gateway.config.ApiGatewayConfig;
 
 public class CorrelationIdFilter  implements GlobalFilter, Ordered{
 
@@ -36,6 +37,6 @@ public class CorrelationIdFilter  implements GlobalFilter, Ordered{
 	@Override
 	public int getOrder() {
 		// TODO Auto-generated method stub
-		return -100;
+		return ApiGatewayConfig.CORRELATION_ID_FILTER;
 	}
 }
